@@ -1,0 +1,9 @@
+# Tupiles cannot be changed
+
+#Example
+
+# Creating the tuple
+continents = ("Africa", "Asia", "Antarctica", "Europe", "North America", "South America")
+
+# print first and last continent
+print(continents[0], continets[-1])
