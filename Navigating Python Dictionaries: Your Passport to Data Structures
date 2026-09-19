@@ -1,0 +1,22 @@
+# Creating a dictionary to hold the country as key and its capital as value
+capital_cities = {
+    "France": "Paris",
+    "Japan": "Tokyo",
+    "Kenya": "Nairobi",
+    "Australia" : "Sydney",
+}
+
+# Add USA with its capital; Adds to dictrionary 
+capital_cities["USA"] = "Washington D.C."
+
+# Access and print the capital city of USA
+print(capital_cities["USA"])
+
+# Delete from dictionary; Removes France from Dictrionary
+del capital_cities["France"]
+
+# Update Dictionary; Overwrites exsisting dictionary 
+capital_cities["Australia"] = "Canberra"
+
+# Print full dictionary
+print(capital_cities) 
