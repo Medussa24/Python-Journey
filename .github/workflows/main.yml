@@ -1,0 +1,6 @@
+x = 5
+y = 10
+
+print(f"x = {x}")
+print(f"sum = {x + y}")
+print(f"length = {len([1, 2, 3]}")
