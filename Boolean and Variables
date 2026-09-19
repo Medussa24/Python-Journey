@@ -1,0 +1,10 @@
+# TODO: Define the new destinations and their visit status.
+destination_A = "Auckland"
+destination_B = "Dubai"
+
+destination_A_status = False
+destination_B_status = False
+# Then print out the variables in a meaningful way.
+
+print(f" Has travelor visited {destination_A}? : {destination_A_status}")
+print(f"Has travelor visited {destination_B}? : {destination_B_status}")
