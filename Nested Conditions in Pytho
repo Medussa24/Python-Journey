@@ -1,0 +1,14 @@
+# Example 1 where age and budget are in 
+
+age = 23
+budget = 900
+
+if age > 18:
+    if budget > 1000:
+        print("You are eligible for the international travel package.")
+    elif 500 <= budget <= 1000:
+        print("you qualify for the special travel deal!")
+    else:
+        print("Your budget is too low for the available travel packages.")
+else:
+    print("You are eligible for the children's travel package.") 
