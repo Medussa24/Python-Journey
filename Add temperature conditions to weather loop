@@ -1,0 +1,17 @@
+          # List of temperatures with mixed weather conditions
+temperatures = [32, 18, 21, 28, 35, 19, 22]
+
+for temp in temperatures:
+          # run the loop once and exit the loop
+if temp> 30:
+    print("It's really hot.")
+          # using break command we exit the loop by force
+    break
+
+elif temp < 20:
+    print("It's quite chilly.")
+    continue
+
+else:
+    print("It's nice out today.")
+  
