@@ -1,0 +1,14 @@
+#Lets imagine a traveler
+
+travel_destinations = {
+		"France": {"capital": "Paris, "visited": False},
+		"Italy": {"capital": "Rome", "visited": True},
+		"Spain": {"capital": "Madrid", "visited": False},
+}
+
+destination = "Italy"
+
+if travel_destinations[destination]["visited"]:
+		print("You have vistited ", destination)
+
+# Expected output is " You have visited Italy". 
