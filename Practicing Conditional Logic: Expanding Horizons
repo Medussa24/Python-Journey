@@ -1,0 +1,38 @@
+# Simplified travel profile for the traveler
+travel_profile = {
+    "passport": True, 
+    "tickets": True,
+}
+
+# Check if the basic requirement for travel are met (passport and tickets)
+if travel_profile['passport'] and travel_profile['tickets']:
+    print("You are ready for the initial phase of travel preparation.")
+else:
+    print("Please ensure you have both your passport and tickets.")
+
+
+
+# Travel profile has necessary details of the traveller
+travel_profile = {
+    "passport": True,
+    "visa": {"required": True, "available": False},
+    "tickets": True,
+}
+
+# Check if passport and tickets are available
+if travel_profile["passport"] and travel_profile["tickets"]:
+
+    # Check if a visa is required
+    if travel_profile["visa"]["required"]:
+
+        # If required, check if the visa is available
+        if travel_profile["visa"]["available"]:
+            print("You are ready to travel.")
+        else:
+            print("You still need your visa.")
+
+    else:
+        print("You are ready to travel.")
+
+else:
+    print("You need your passport and tickets first.")
