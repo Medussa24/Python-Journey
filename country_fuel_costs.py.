@@ -1,0 +1,12 @@
+# create a list
+countries_chosen = [ "France", "Japan", "USA"]
+
+country_fuel_cost = { "France": 50, "Japan": 65, "USA": 125}
+
+total_cost = 0
+
+for country in countries_chosen:
+total_cost += country_fuel_cost[country]
+
+print(total_cost)
+print(chosen_country)
