@@ -1,0 +1,64 @@
+def analyze_trip_expenses(expenses, budget_limit):
+    """
+    Loop through `expenses` and sum only the items that are less than
+    or equal to `budget_limit`. Expenses strictly greater than the
+    limit should be excluded from the total.
+
+    Return a tuple: (total, status)
+    - total: sum of included expenses (0 if none qualify or list is empty)
+    - status: a summary string based on these rules:
+        * empty list           -> "No expenses to analyze."
+        * nothing excluded     -> "All expenses within budget."
+        * everything excluded  -> "No expenses within budget."
+        * some excluded        -> "Excluded N expense(s) over budget."
+
+    Do NOT print anything inside this function.
+    """
+
+    # Handle empty list first
+    if not expenses:
+        return (0, "No expenses to analyze.")
+
+    total = 0
+    excluded_count = 0
+
+    # Loop through expenses
+    for expense in expenses:
+        if expense <= budget_limit:
+            total += expense
+        else:
+            excluded_count += 1
+
+    # Build status message
+    if excluded_count == 0:
+        status = "All expenses within budget."
+    elif excluded_count == len(expenses):
+        status = "No expenses within budget."
+    else:
+        status = f"Excluded {excluded_count} expense(s) over budget."
+
+    return (total, status)
+
+
+# --- Trip data ---
+
+paris_expenses = [300, 120, 80]
+paris_budget = 300
+
+tokyo_expenses = []
+tokyo_budget = 250
+
+rome_expenses = [600, 700, 900]
+rome_budget = 500
+
+
+# Call the function and print results
+
+total, status = analyze_trip_expenses(paris_expenses, paris_budget)
+print(f"Paris Trip -> Total: ${total:.2f} | {status}")
+
+total, status = analyze_trip_expenses(tokyo_expenses, tokyo_budget)
+print(f"Tokyo Trip -> Total: ${total:.2f} | {status}")
+
+total, status = analyze_trip_expenses(rome_expenses, rome_budget)
+print(f"Rome Trip -> Total: ${total:.2f} | {status}")
