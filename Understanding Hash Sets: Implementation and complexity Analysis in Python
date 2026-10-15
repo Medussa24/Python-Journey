@@ -1,0 +1,40 @@
+# Importing the necessarey libraries
+import time
+
+#define a function to demonstrate the operation and time complexity of a hash set
+def compare_operations():
+
+  # Create a list and a set
+  data_list = []
+  data_set = set()
+
+  # adding elemeents to the list and set
+  for i in range(10**6):
+      data_list.append(i)
+      data_set.add(i)
+
+  # Set and List are ready; now lets define a non-exsisting item to search for 
+  test_item = 10**6 + 1  # This item is not in our set or list 
+
+    # time the 100 consecutive operations of checking wether 'test_item' is in 'data_set' and print the result and time taken
+  start_time = time.time()
+
+  for i in range(100):
+      result = test_item in data_set
+  elapsed_time = time.time() - start_time
+
+  print("set result:", result)
+  print("set time:", elapsed_time)
+
+  # time the 100 consecutive operations of checking wether 'test_item' is in the 'data_list' and print the result and time taken
+  start_time = time.time()
+
+  for i in range(100): 
+      result = test_item in data_list
+
+  elapsed_time = time.time() - start_time
+
+  print("list result:", result)
+  print("List time:", elapsed_time)
+
+print(compare_operations())
