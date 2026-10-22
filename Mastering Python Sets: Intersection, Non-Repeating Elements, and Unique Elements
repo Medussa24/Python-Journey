@@ -1,0 +1,35 @@
+// This one was very new to me. The idea that nested loops take more time to run than using sets which are more persice and accurate
+// I expext to learn more about how to use the reverse functions, as well as the " & " operator 
+// Seems simple, so far I can see myself using this when handling large data sets and big data
+
+
+def intersecting_elements(set1, set2)
+    common = set1 & set2
+    return sorted(common, reverse=True)
+print(intersecting_elements({1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, {5, 6, 7, 8, 9, 10, 11, 12, 13, 14}))
+# Expected output: [10, 9, 8, 7, 6, 5]
+
+print(intersecting_elements({-1, -2, -3, -4, -5}, {-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5}))
+# Expected output: [-1, -2, -3, -4, -5]
+
+print(intersecting_elements({1, 3, 5, 7, 9}, {2, 4, 6, 8, 10}))
+# Expected output: []
+
+
+
+def repeating_elements(nums):
+    # implement this
+    seen = set()
+    repeated = set()
+    
+    for num in nums:
+        if num in seen:
+            seen.add(num)
+            repeated.add(num)
+        else:
+            seen.add(num)
+    return list(repeated) 
+
+print(repeating_elements([9, 8, 7, 8, 7, 6, 5]))  # expected output : [8, 7]
+print(repeating_elements([-1, 2, 3, -1, 2, 3]))   # expected output : [-1, 2, 3]
+print(repeating_elements([1, 2, 3, 4, 5]))        # expected output : []
